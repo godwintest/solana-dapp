@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -10,21 +9,20 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+  base: "/solana-dapp/",
+  plugins: [react(), mode === "development" && componentTagger()].filter(
+    Boolean
+  ),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   define: {
-    'process.env': {},
-    'process.env.NODE_DEBUG': JSON.stringify(''),
-    'process.browser': true,
-    'process': {
+    "process.env": {},
+    "process.env.NODE_DEBUG": JSON.stringify(""),
+    "process.browser": true,
+    process: {
       env: {},
       browser: true,
       version: JSON.stringify(process.version),
@@ -35,8 +33,8 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     esbuildOptions: {
       define: {
-        global: 'globalThis',
+        global: "globalThis",
       },
-    }
+    },
   },
 }));
