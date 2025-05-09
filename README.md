@@ -1,10 +1,10 @@
-
 # Jupiter Swap dApp
 
-This is a fully open-source Solana dApp that integrates with Jupiter Aggregator for token swaps.
+This is a fully open-source Solana dApp that enable passkey login without wallet and integrates with Jupiter Aggregator for token swaps.
 
 ## Features
 
+- Passkey authentication and login without password or wallet
 - Token swapping with Jupiter Aggregator
 - Real-time price updates
 - Mock wallet integration for demonstration purposes
@@ -29,12 +29,14 @@ This is a fully open-source Solana dApp that integrates with Jupiter Aggregator 
 ### Installation
 
 1. Clone the repository
+
 ```sh
-git clone <repository-url>
-cd jupiter-swap-dapp
+git clone https://github.com/godwintest/solana-dapp
+cd solana-dapp
 ```
 
 2. Install dependencies
+
 ```sh
 npm install
 # or
@@ -42,6 +44,7 @@ yarn install
 ```
 
 3. Start the development server
+
 ```sh
 npm run dev
 # or
